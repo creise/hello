@@ -11,7 +11,8 @@ pipeline {
 			        mkdir build
 			        cd build
 			        cmake -D CMAKE_CONFIGURATIONTYPES=Release -G "NMake Makefiles" ..
-			        nmake
+                    nmake clean
+                    nmake
     		    '''
                 warnings consoleParsers: [[parserName: 'MSBuild']]
             }
@@ -20,6 +21,6 @@ pipeline {
             steps {
                 echo 'BlaBla....'
             }
-        }
+        }dsfsdf
     }
 }
