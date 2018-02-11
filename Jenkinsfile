@@ -13,7 +13,7 @@ pipeline {
 			        cmake -D CMAKE_CONFIGURATIONTYPES=Release -G "NMake Makefiles" ..
 			        nmake
     		    '''
-                consoleParsers: [[parserName: 'MSBuild']]
+                warnings consoleParsers: [[parserName: 'MSBuild']]
             }
         }
         stage('Deploy') {
