@@ -7,13 +7,13 @@ pipeline {
             steps {
                 echo 'Testing..'
                 bat '''
-			        call "C:/Program Files (x86)/Microsoft Visual Studio 10.0/Common7/Tools/vsvars32.bat" || exit %errorlevel%
-			        mkdir build
-			        cd build
-			        cmake -D CMAKE_CONFIGURATIONTYPES=Release -G "NMake Makefiles" ..
+                    call "C:/Program Files (x86)/Microsoft Visual Studio 10.0/Common7/Tools/vsvars32.bat" || exit %errorlevel%
+                    mkdir build
+                    cd build
+                    cmake -D CMAKE_CONFIGURATIONTYPES=Release -G "NMake Makefiles" ..
                     nmake clean
                     nmake
-    		    '''
+                '''
                 warnings consoleParsers: [[parserName: 'MSBuild']]
             }
         }
@@ -21,6 +21,6 @@ pipeline {
             steps {
                 echo 'BlaBla....'
             }
-        }dsfsdf
+        }
     }
 }
