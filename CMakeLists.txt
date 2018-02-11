@@ -6,6 +6,6 @@ add_executable(hello helloworld.cpp)
 
 
 if (MSVC)
-	target_compile_options(hello PUBLIC /WX)
+	#target_compile_options(hello PUBLIC /WX)
 	set_target_properties(hello PROPERTIES VS_PROPERTY_SHEETS "${CMAKE_CURRENT_SOURCE_DIR}/msvc/blabla.props")
 endif(MSVC)
